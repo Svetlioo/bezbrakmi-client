@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.8rem;
+  height: 9.2rem;
+  background-color: #ff6600;
+}
+
+.obqvi {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+.nav-items li a,
+.obqvi a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.nav-items li:last-child,
+.obqvi a:last-child {
+  background-color: #023047;
+  padding: 1rem 3rem;
+  border-radius: 15px;
+}
+
+.nav-items li:hover,
+.obqvi a:hover {
+  filter: invert(100%);
+}
+
+.nav-items li a:global(.active) {
+  color: #023047;
+}
+
+.nav-items li a:global(.active):hover {
+  filter: invert(100%);
+  /* Inverting it again so that the .active is not inverted when hovered. It looks weird without that option. */
+}
