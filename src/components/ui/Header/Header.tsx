@@ -16,7 +16,7 @@ function Header() {
             <NavLink to={"/"}>Продай кола</NavLink>
           </li>
           <li>
-            <NavLink to={"/home"}>Често задавани въпроси</NavLink>
+            <NavLink to={"/"}>Често задавани въпроси</NavLink>
           </li>
           <li>
             <Link to={"/register"}>Sign in</Link>
