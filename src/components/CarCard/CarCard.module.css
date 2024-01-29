@@ -1,0 +1,117 @@
+.car-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.6rem;
+  margin: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  background-color: rgba(247, 247, 247, 0.5);
+  position: relative;
+}
+
+.car-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.car-date {
+  align-self: flex-start;
+  margin-top: -0.3rem;
+  padding: 0.1rem 0.4rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.4rem;
+  letter-spacing: 1.2px;
+}
+
+.car-image {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 0.75;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+@media (max-width: 750px) {
+  .car-image {
+    aspect-ratio: 1 / 0.6;
+  }
+}
+
+.car-details {
+  width: 100%;
+  color: #333;
+  text-align: left;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-details h3 {
+  font-weight: bold;
+}
+
+/* .car-main-details {
+  font-weight: 500;
+  width: 90%;
+  text-align: start;
+  display: inline-block;
+} */
+
+.divider {
+  border-top: 1px solid #000;
+  opacity: 0.12;
+  margin: 0.5rem auto 1rem auto;
+  width: 100%;
+}
+
+.car-main-details {
+  font-weight: 200;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.car-price {
+  position: absolute;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  left: 1rem;
+  bottom: 2rem;
+  z-index: 1;
+  background-color: #1d2022c5;
+  color: #e8e8e8;
+  padding: 0.4rem 0.8rem;
+  border-radius: 10px;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+}
+
+.car-description {
+  margin: 1rem 0;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.short-description {
+  margin-top: auto;
+  /* FIX THIS !!!!!!!!!!  */
+}
+
+.car-location-owner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.8);
+}
