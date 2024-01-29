@@ -7,7 +7,9 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.obqvi}>
         <Logo />
-        <Link to={"/"}>Всички коли</Link>
+        <Link to={"/"} className={styles["all-obqvi"]}>
+          Всички коли
+        </Link>
       </div>
 
       <nav>
@@ -18,8 +20,8 @@ function Header() {
           <li>
             <NavLink to={"/"}>Често задавани въпроси</NavLink>
           </li>
-          <li>
-            <Link to={"/register"}>Sign in</Link>
+          <li className={styles["register"]}>
+            <Link to={"/register"}>Влез</Link>
           </li>
         </ul>
       </nav>
