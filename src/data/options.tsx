@@ -215,6 +215,7 @@ export const filterOptions: FilterOption[] = [
 export const brandModelOptions: BrandModelOption = {
   name: "Марка",
   options: [
+    { brand: "Всички", models: [] },
     {
       brand: "VW",
       models: [
@@ -382,3 +383,10 @@ export const brandModelOptions: BrandModelOption = {
     { brand: "LDV", models: ["D90", "T60", "EV80"] },
   ],
 };
+
+export const initialFilterState = filterOptions.map((option) => ({
+  name: option.name,
+  filter: [],
+}));
+
+console.log(initialFilterState);
