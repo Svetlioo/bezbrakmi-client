@@ -1,4 +1,4 @@
-.modalOverlay {
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +16,7 @@
   padding: 1rem;
 }
 
-.modalContent {
+.modal-content {
   background: #ffffff;
   width: 80rem;
   min-height: 55vh;
@@ -33,7 +33,7 @@
   transform: translateY(0);
 }
 
-.readyButton {
+.ready-button {
   background-color: #4caf50;
   color: white;
   padding: 1rem 2rem;
@@ -47,7 +47,7 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.readyButton:hover {
+.ready-button:hover {
   background-color: #45a049;
 }
 
@@ -61,7 +61,7 @@
 }
 
 @media screen and (max-width: 750px) {
-  .modalContent {
+  .modal-content {
     width: 100%;
     min-height: 65vh;
     overflow: scroll;
