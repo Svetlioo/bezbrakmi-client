@@ -6,9 +6,16 @@ interface ModalProps {
   onClose: () => void;
   isOpen: boolean;
   filterOptionName: string;
+  forceScroll?: boolean;
 }
 
-const Modal = ({ children, onClose, isOpen, filterOptionName }: ModalProps) => {
+const Modal = ({
+  children,
+  onClose,
+  isOpen,
+  filterOptionName,
+  forceScroll = false,
+}: ModalProps) => {
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -31,18 +38,20 @@ const Modal = ({ children, onClose, isOpen, filterOptionName }: ModalProps) => {
 
   return (
     <div
-      className={`${styles.modalOverlay} ${
+      className={`${styles["modal-overlay"]} ${
         isOpen ? `${styles.active} ${styles["hide-scroll"]}` : ""
       }`}
       onClick={onClose}
     >
       <div
-        className={`${styles.modalContent} ${isOpen ? styles.active : ""}`}
+        className={`${styles["modal-content"]} ${isOpen ? styles.active : ""} ${
+          forceScroll ? styles["force-scroll"] : ""
+        }`}
         onClick={(e) => e.stopPropagation()}
       >
         <h2 className={styles.heading}>{filterOptionName}</h2>
         <div className={styles.container}>{children}</div>
-        <button className={styles.readyButton} onClick={onClose}>
+        <button className={styles["ready-button"]} onClick={onClose}>
           &#10004; Потвърди
         </button>
       </div>

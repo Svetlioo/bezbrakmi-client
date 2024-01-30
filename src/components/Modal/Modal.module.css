@@ -56,6 +56,10 @@
   flex-wrap: wrap;
 }
 
+.force-scroll {
+  overflow: scroll;
+}
+
 @media screen and (max-width: 750px) {
   .modalContent {
     width: 100%;
