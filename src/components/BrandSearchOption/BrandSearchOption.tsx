@@ -1,5 +1,3 @@
-import styles from "../SearchOption/SearchOption.module.css";
-
 import { useState } from "react";
 import Modal from "../Modal/Modal";
 import SearchButton from "../SearchButton/SearchButton";
@@ -7,11 +5,9 @@ import SearchButton from "../SearchButton/SearchButton";
 function SearchOption({
   filterOption,
   forceScroll,
-  handleBrandChange,
 }: {
   filterOption: BrandModelOption;
   forceScroll?: boolean;
-  handleBrandChange: (brand: string) => void;
 }) {
   const [isModalOpen, setModalOpen] = useState(false);
 
@@ -20,11 +16,6 @@ function SearchOption({
   };
 
   const handleCloseModal = () => {
-    setModalOpen(false);
-  };
-
-  const handleClickOption = (brand: string) => {
-    handleBrandChange(brand);
     setModalOpen(false);
   };
 
