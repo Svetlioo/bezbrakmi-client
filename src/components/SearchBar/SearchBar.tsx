@@ -4,29 +4,19 @@ import styles from "./SearchBar.module.css";
 import { brandModelOptions, filterOptions } from "../../data/options";
 import BrandSearchOption from "../BrandSearchOption/BrandSearchOption";
 
-interface FilterState {
-  filters: { name: string; filter: string | string[] }[];
-}
-
 function SearchBar() {
-  const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
-  const [selectedFilters, setSelectedFilters] = useState<FilterState>({
-    filters: [],
-  });
-
-  const handleBrandChange = (brand: string) => {
-    setSelectedBrand(brand);
-  };
+  const [selectedFilters, setSelectedFilters] = useState<FilterState[]>([]);
 
   return (
     <div className={styles["search-bar"]}>
-      <BrandSearchOption
-        filterOption={brandModelOptions}
-        forceScroll={true}
-        handleBrandChange={handleBrandChange}
-      />
+      <BrandSearchOption filterOption={brandModelOptions} forceScroll={true} />
       {filterOptions.map((filterOption) => (
-        <SearchOption filterOption={filterOption} key={filterOption.name} />
+        <SearchOption
+          filterOption={filterOption}
+          selectedFilters={selectedFilters}
+          setSelectedFilters={setSelectedFilters}
+          key={filterOption.name}
+        />
       ))}
     </div>
   );
